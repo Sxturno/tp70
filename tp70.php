@@ -23,19 +23,21 @@ class Menu{
     }
     public function imprimir()
     {
-        echo $this->Nombre;
+        echo "nombre: ".$this->Nombre;
+        echo '<br>';
+        echo "el sueldo total es ".$this->calcular();
         echo '<br>';
     }
     public function calcular()
     {
         $mult=$this->HorasT * $this->SueldoPh;
-        echo $mult;
+        return $mult;
     }
 }
 $Menu =new Menu();
 $Menu->inicializar($Nombre, $HorasT, $SueldoPh);
-$Menu->imprimir();
 $Menu->calcular();
+$Menu->imprimir();
 
 ?>
 </body>
